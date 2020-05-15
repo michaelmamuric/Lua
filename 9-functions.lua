@@ -17,9 +17,10 @@ local function get_distance(x1, y1, x2, y2)
 end
 
 -- Player position in the middle of the screen (assuming resolution is 800 x 600)
-local player_x, player_y = 400, 300
+local player = {x = 400, y = 300} -- enhanced to use tables
+
 -- Initialize Enemy position
-local enemy_x, enemy_y = 0, 0
+local enemy = {x = 0, y = 0} -- enhanced to use tables
 
 local user_option = 0
 
@@ -35,9 +36,9 @@ while user_option ~= 4 do
 
     -- Option 1: Generate random enemy position
     if user_option == 1 then
-        enemy_x = math.random(0, 800)
-        enemy_y = math.random(0, 600)
-        print("New enemy position: "..enemy_x..", "..enemy_y)
+        enemy.x = math.random(0, 800) -- shortcut for enemy["x"]
+        enemy.y = math.random(0, 600) -- shortcut for enemy["y"]
+        print("New enemy position: "..(enemy.x)..", "..(enemy.y))
     end
 
     -- Option 2: Distance from enemy to player
@@ -47,7 +48,7 @@ while user_option ~= 4 do
     -- Adjacent = enemy_x - player_x
     -- Opposite = enemy_y - player_y
     if user_option == 2 then
-        local distance = get_distance(enemy_x, enemy_y, player_x, player_y) 
+        local distance = get_distance(enemy.x, enemy.y, player.x, player.y) 
         print("Distance from enemy to player: "..distance)
     end
 
@@ -55,7 +56,7 @@ while user_option ~= 4 do
     -- Needs more trigonometry!
     if user_option == 3 then
         -- this will return value in radians, not the actual degre
-        local angle = math.atan2((enemy_y - player_y), (enemy_x - player_x))
+        local angle = math.atan2((enemy.y - player.y), (enemy.x - player.x))
         -- convert from radians to degrees
         local degree = math.deg(angle)
         print("Angle between enemy and player: "..degree)        
