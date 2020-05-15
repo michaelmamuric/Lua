@@ -13,3 +13,20 @@ for i = 1, 3 do
         print('[Loop] Row '..i.. ' Column '..j..': '..matrix[i][j])
     end
 end
+
+-- Creating a matrix using loops
+
+-- create an empty table
+local matrix2 = {}
+
+for x = 1, 3 do
+    -- new row
+    matrix2[x] = {}
+    for y = 1, 3 do
+        matrix2[x][y] = 0
+    end
+end
+
+print('[Matrix2] Row 1 Column 1: '..matrix2[1][1])
+print('[Matrix2] Row 2 Column 2: '..matrix2[2][2])
+print('[Matrix3] Row 3 Column 3: '..matrix2[3][3])
