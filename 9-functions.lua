@@ -48,7 +48,7 @@ while user_option ~= 4 do
     -- Adjacent = enemy_x - player_x
     -- Opposite = enemy_y - player_y
     if user_option == 2 then
-        local distance = get_distance(enemy.x, enemy.y, player.x, player.y) 
+        local distance = get_distance(enemy.x, enemy.y, player.x, player.y)
         print("Distance from enemy to player: "..distance)
     end
 
@@ -59,7 +59,7 @@ while user_option ~= 4 do
         local angle = math.atan2((enemy.y - player.y), (enemy.x - player.x))
         -- convert from radians to degrees
         local degree = math.deg(angle)
-        print("Angle between enemy and player: "..degree)        
+        print("Angle between enemy and player: "..degree)
     end
 end
 
