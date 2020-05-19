@@ -18,7 +18,7 @@ end
 
 -- Adds two vector tables together
 local function addVectors(vector1, vector2)
-    return newVector(vector1.x + vector2.x, vector2.y + vector2.y, vector1.z + vector2.z)
+    return newVector(vector1.x + vector2.x, vector1.y + vector2.y, vector1.z + vector2.z)
 end
 meta.__add = addVectors
 
