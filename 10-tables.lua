@@ -4,10 +4,11 @@
 local tableA = {34, 22, 12, 9, -34, 55, 89, 1672, 12}
 
 -- Fetching by index
--- Returns the first element in the table. Remember, indices in Lua start with 1!
+-- Returns the first element in the table, i.e. 34. Indices in Lua start with 1!
 print("First element: "..tableA[1])
--- Returns the third element in the table
-print("Second element: "..tableA[3])
+-- Returns the last element in the table, i.e. 12
+-- #[tableA] -> returns the length of table
+print("Last element: "..tableA[#tableA])
 
 -- Tables in Lua are more commonly used as associative arrays, using key-value pairs
 local quiz_scores = {
@@ -16,7 +17,6 @@ local quiz_scores = {
     ["peter"] = 9,
     ["mary"] = 10
 }
-
 -- Fetching by key
 print("Michael's score: "..quiz_scores["michael"]) -- returns 10
 print("Peter's score: "..quiz_scores["peter"]) -- returns 9

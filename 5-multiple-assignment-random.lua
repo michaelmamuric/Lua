@@ -3,8 +3,8 @@
 
 -- example below is equivalent to commented line above
 x, y = 1, 2
-print("X-coordinate: "..x)
-print("Y-coordinate: "..y)
+print("X-coordinate: "..x) -- prints 1
+print("Y-coordinate: "..y) -- prints 2
 
 -- you can swap variable values easily as well
 x, y = y, x
